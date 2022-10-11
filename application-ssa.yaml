@@ -11,14 +11,12 @@ spec:
   source:
     path: app
     repoURL: https://github.com/christianh814/ssa-test
-    targetRevision: main
+    targetRevision: with-annotations
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
-      - ServerSideApply=true  # Enable SSA
-      - Validate=false # Needed for patching
       - CreateNamespace=true
     retry:
       limit: 5
