@@ -60,4 +60,21 @@ By using [server side apply on the Argo CD Application](application-ssa.yaml#L20
 Apply the Argo CD Application
 
 ```shell
+kubectl apply -f \
+https://raw.githubusercontent.com/christianh814/ssa-test/main/application-ssa.yaml
+```
+
+Check your pods now
+
+```shell
+kubectl get pods -n test
+```
+
+You should now have 3 replicas
+
+```
+NAME                           READY   STATUS    RESTARTS   AGE
+welcome-php-689d9cfb5b-nqrqr   1/1     Running   0          16s
+welcome-php-689d9cfb5b-rgbck   1/1     Running   0          16s
+welcome-php-689d9cfb5b-sm5fk   1/1     Running   0          8m33s
 ```
