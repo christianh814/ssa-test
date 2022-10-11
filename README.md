@@ -21,4 +21,9 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2
 
 ## Test App
 
-Apply the test app from this repo
+Apply the test app from this repo (this will be "out of band" from Argo CD to test patching)
+
+```shell
+kubectl apply -f \
+https://raw.githubusercontent.com/christianh814/ssa-test/main/out-of-band.yaml
+```
