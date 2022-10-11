@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test
+spec: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: welcome-php
+  name: welcome-php
+  namespace: test
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: welcome-php
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: welcome-php
+  name: welcome-php
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: welcome-php
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: welcome-php
+    spec:
+      containers:
+      - image: quay.io/redhatworkshops/welcome-php
+        name: welcome-php
+        resources: {}
