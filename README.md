@@ -27,3 +27,20 @@ Apply the test app from this repo (this will be "out of band" from Argo CD to te
 kubectl apply -f \
 https://raw.githubusercontent.com/christianh814/ssa-test/main/out-of-band.yaml
 ```
+
+Check the pods
+
+```shell
+kubeclt get pods -n test
+```
+
+You should see one pod.
+
+```
+NAME                           READY   STATUS    RESTARTS   AGE
+welcome-php-689d9cfb5b-sm5fk   1/1     Running   0          77sshell
+```
+
+## SSA Test
+
+
