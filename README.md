@@ -43,4 +43,21 @@ welcome-php-689d9cfb5b-sm5fk   1/1     Running   0          77sshell
 
 ## SSA Test
 
+The Argo CD app is targeting the [app](app) directory. There is only one, incomplete, file there. It looks like this
 
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: welcome-php
+  namespace: test
+spec:
+  replicas: 3
+```
+
+By using [server side apply on the Argo CD Application](application-ssa.yaml#L20), you only have to store the "delta" (or just what you want to change) in your repo.
+
+Apply the Argo CD Application
+
+```shell
+```

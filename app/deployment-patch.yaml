@@ -4,4 +4,4 @@ metadata:
   name: welcome-php
   namespace: test
 spec:
-  replicas: 1
+  replicas: 3
