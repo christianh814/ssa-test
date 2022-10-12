@@ -16,7 +16,7 @@ Argo CD v2.5 RC
 
 ```shell
 kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.0-rc1/manifests/install.yaml
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.5.0-rc2/manifests/install.yaml
 ```
 
 ## Test App
