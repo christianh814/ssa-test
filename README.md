@@ -55,7 +55,7 @@ spec:
   replicas: 3
 ```
 
-By using [server side apply on the Argo CD Application](application-ssa.yaml#L20), you only have to store the "delta" (or just what you want to change) in your repo.
+By using [server side apply annotation](app/deployment-patch.yaml#L5), you only have to store the "delta" (or just what you want to change) in your repo.
 
 Apply the Argo CD Application
 
