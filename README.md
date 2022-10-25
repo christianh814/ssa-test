@@ -61,7 +61,7 @@ Apply the Argo CD Application
 
 ```shell
 kubectl apply -f \
-https://raw.githubusercontent.com/christianh814/ssa-test/main/application-ssa.yaml
+https://raw.githubusercontent.com/christianh814/ssa-test/with-annotations/application-ssa.yaml
 ```
 
 Check your pods now
