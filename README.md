@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/christianh814/ssa-test/main/out-of-band.yaml
 Check the pods
 
 ```shell
-kubeclt get pods -n test
+kubectl get pods -n test
 ```
 
 You should see one pod.
