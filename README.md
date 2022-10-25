@@ -1,6 +1,6 @@
 # Argo CD SSA Test
 
-Just testing the SSA apply for rc 2.5
+Just testing the SSA apply for Argo CD
 
 ## Install K8S
 
@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/christianh814/ssa-test/main/out-of-band.yaml
 Check the pods
 
 ```shell
-kubeclt get pods -n test
+kubectl get pods -n test
 ```
 
 You should see one pod.
