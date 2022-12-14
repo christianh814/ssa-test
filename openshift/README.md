@@ -24,7 +24,7 @@ oc get ingresscontroller/default -n openshift-ingress-operator  -o yaml
 
 ## SSA Apply
 
-Now you just save the delta (in [openshift/app/openshift-ingress-patch.yaml](openshift/app/openshift-ingress-patch.yaml), example:
+Now you just save the delta (in [openshift/app/openshift-ingress-patch.yaml](openshift/app/openshift-ingress-patch.yaml)), example:
 
 ```yaml
 apiVersion: operator.openshift.io/v1
@@ -38,7 +38,7 @@ spec:
   replicas: 3
 ```
 
-Note the annotations. Read more [here](https://argo-cd.readthedocs.io/en/latest/user-guide/sync-options/#server-side-apply)
+Note the annotations. Read more about SSA [here](https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#server-side-apply)
 
 Apply the [Argo CD Application](openshift/ssa-app-example.yaml)
 
