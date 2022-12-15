@@ -14,17 +14,17 @@ router-default-766cf577f4-qk2qh   1/1     Running   1 (77m ago)   86m
 router-default-766cf577f4-sd8p4   1/1     Running   1 (76m ago)   86m
 ```
 
-In earlier versions, you had to get the YAML from the cluster
+In earlier versions, you had to get the YAML from the cluster...
 
 ```shell
 oc get ingresscontroller/default -n openshift-ingress-operator  -o yaml
 ```
 
-... ^ and strip out the things you didn't need and save that in Git.
+... ^ and strip out the things you didn't need and save that in Git. Now, you don't need to.
 
 ## SSA Apply
 
-Now you just save the delta (in [openshift/app/openshift-ingress-patch.yaml](openshift/app/openshift-ingress-patch.yaml)), example:
+Now, you just save the delta (in [openshift/app/openshift-ingress-patch.yaml](openshift/app/openshift-ingress-patch.yaml)), example:
 
 ```yaml
 apiVersion: operator.openshift.io/v1
@@ -44,4 +44,14 @@ Apply the [Argo CD Application](openshift/ssa-app-example.yaml)
 
 ```shell
 oc apply -n openshift-gitops -f https://raw.githubusercontent.com/christianh814/ssa-test/main/openshift/ssa-app-example.yaml
+```
+
+And now you should have 3:
+
+```shell
+$ oc get pods -n openshift-ingress
+NAME                              READY   STATUS    RESTARTS      AGE
+router-default-766cf577f4-qk2qh   1/1     Running   1 (7m ago)    10m
+router-default-766cf577f4-sd8p4   1/1     Running   1 (76m ago)   86m
+router-default-766cf577f4-zf3ah   1/1     Running   1 (76m ago)   86m
 ```
