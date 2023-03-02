@@ -40,7 +40,7 @@ spec:
 
 Note the annotations. Read more about SSA [here](https://argo-cd.readthedocs.io/en/stable/user-guide/sync-options/#server-side-apply)
 
-Apply the [Argo CD Application](openshift/ssa-app-example.yaml)
+Apply the [Argo CD Application](ssa-app-example.yaml)
 
 ```shell
 oc apply -n openshift-gitops -f https://raw.githubusercontent.com/christianh814/ssa-test/main/openshift/ssa-app-example.yaml
