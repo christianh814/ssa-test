@@ -24,7 +24,7 @@ oc get ingresscontroller/default -n openshift-ingress-operator  -o yaml
 
 ## SSA Apply
 
-Now, you just save the delta (in [openshift/app/openshift-ingress-patch.yaml](openshift/app/openshift-ingress-patch.yaml)), example:
+Now, you just save the delta (in [app/openshift-ingress-patch.yaml](app/openshift-ingress-patch.yaml)), example:
 
 ```yaml
 apiVersion: operator.openshift.io/v1
